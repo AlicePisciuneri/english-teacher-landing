@@ -189,11 +189,11 @@ Il pagamento può essere effettuato tramite PayPal. (non ci sarà la sezione pag
 # Contatti
 WhatsApp
 
-34#########
+3472912530
 
 Email
 
-teacher@
+cheagle@hotmail.it
 
 I contatti devono essere facilmente raggiungibili dalla landing.
 

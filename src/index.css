@@ -923,3 +923,8 @@ section[id] { scroll-margin-top: 90px; }
   .contact-text ul { text-align: left; }
 }
 .contact-btn > .email { width: 100%; }
+.pricing-modern-section, .services-modern-section { width: 100%; min-width: 0; }
+.pricing-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.pricing-card { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 992px) { .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 768px) { .pricing-grid { grid-template-columns: minmax(0, 1fr); } }

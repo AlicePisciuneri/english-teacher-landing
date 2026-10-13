@@ -922,3 +922,4 @@ section[id] { scroll-margin-top: 90px; }
   .hero-image-card { height: 360px; }
   .contact-text ul { text-align: left; }
 }
+.contact-btn > .email { width: 100%; }

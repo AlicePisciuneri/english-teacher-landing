@@ -707,7 +707,7 @@ button {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #134647;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   gap: 40px;
   align-items: center;
   padding: 40px;
@@ -722,7 +722,7 @@ button {
 .btn-email {
   background-color: #134647;
   color: #DADBD5;
-  width: 300px;
+  width: 100%;
   height: 70px;
   border-radius: 10px;
   font-size: 20px;
@@ -744,7 +744,7 @@ button {
 .btn-whatsapp {
   background-color: #0b352c;
   color: white;
-  width: 300px;
+  width: 100%;
   height: 60px;
   border-radius: 10px;
   padding: 10px;
@@ -771,7 +771,7 @@ button {
   margin-right: 10px;
 }
 
-@media (max-widht: 992px) {
+@media (max-width: 992px) {
   .contact-grid-container {
     display: flex;
     flex-direction: column;
@@ -793,7 +793,7 @@ button {
   }
 }
 
-@media (max-widht: 768px) {
+@media (max-width: 768px) {
   .contact-grid-container {
     display: flex;
     flex-direction: column;
@@ -823,7 +823,7 @@ button {
   }
 }
 
-@media (max-widht: 576px) {
+@media (max-width: 576px) {
   .contact-grid-container {
     display: flex;
     flex-direction: column;
@@ -893,4 +893,32 @@ button {
   border-top: #DADBD5 1px solid;
   justify-content: center;
   font-size: 15px;
+}
+/* Keep contact controls aligned without widening the viewport. */
+.contact-grid-container > *, .contact-btn, .email { min-width: 0; }
+.contact-btn { width: 100%; max-width: 350px; justify-self: center; }
+.btn-email, .btn-whatsapp { min-height: 70px; height: auto; padding: 14px 16px; gap: 8px; }
+.btn-whatsapp, .email-top-row { display: flex; align-items: center; gap: 10px; }
+.icon-email, .icon-whatsapp { flex: 0 0 auto; width: auto; height: auto; margin: 0; padding: 0; }
+.email-address { margin-left: 0; overflow-wrap: anywhere; }
+.hamburger-btn { flex-shrink: 0; }
+section[id] { scroll-margin-top: 90px; }
+@media (max-width: 768px) {
+  .hamburger-btn { width: 44px; height: 44px; padding: 10px 7px; }
+}
+@media (max-width: 576px) {
+  .btn-whatsapp { flex-direction: row; }
+  .email-top-row { justify-content: center; }
+}
+
+/* Small screens: keep long labels and grid contents inside their cards. */
+.hero-text-content > .mt-4 { width: 100%; }
+.btn-hero { height: auto; min-height: 60px; text-align: center; padding: 12px 15px; }
+@media (min-width: 992px) {
+  .about-grid-container, .method-grid-container { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+}
+@media (max-width: 576px) {
+  .hero-title { font-size: clamp(1.6rem, 7vw, 2rem); }
+  .hero-image-card { height: 360px; }
+  .contact-text ul { text-align: left; }
 }

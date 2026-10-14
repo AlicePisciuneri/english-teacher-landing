@@ -1,69 +1,68 @@
-import React from 'react'
-
 const Services = () => {
-
-  const serviceCards = [
+  const paths = [
     {
-      id: 1,
-      title: "Lezioni",
-      intro: "Un supporto flessibile e mirato per ogni esigenza linguistica, progettato per aiutarti a raggiungere i tuoi obiettivi con sicurezza:",
-      items: [
-        "Lezioni individuali e di gruppo: Percorsi su misura per un'attenzione esclusiva o dinamiche di apprendimento condivise.",
-        "Supporto scolastico e recupero: Aiuto compiti mirato e rafforzamento costante per affrontare la scuola senza stress.",
-        "Percorsi personalizzati: Programmi flessibili creati in base al tuo livello e ai tuoi ritmi.",
-        "Rafforzamento della lingua: Attività specifiche per migliorare fluidità, pronuncia e sicurezza nell'uso dell'inglese."
-      ]
+      id: 'supporto-scolastico',
+      title: 'Supporto scolastico',
+      audience: 'Per studenti delle scuole medie e superiori che hanno bisogno di aiuto con lo studio o vogliono rafforzare il proprio inglese.',
+      activities: ['Aiuto con i compiti e comprensione degli argomenti affrontati in classe.', 'Recupero delle lacune e consolidamento di grammatica e vocabolario.', 'Esercizi di comprensione e conversazione per affrontare lo studio con più sicurezza.'],
+      start: 'Nel primo incontro gratuito parliamo delle difficoltà e degli obiettivi scolastici.',
+      message: 'Ciao Chezia, vorrei prenotare il primo incontro gratuito per il supporto scolastico.'
     },
     {
-      id: 2,
-      title: "A chi sono rivolte",
-      intro: "Soluzioni pensate su misura per accompagnare ogni fascia d'età nel proprio percorso di crescita:",
-      items: [
-        "Bambini: Percorsi ludici e stimolanti, adatti all'età e al primo approccio con la lingua.",
-        "Ragazzi e Scuole (Medie e Superiori): Supporto allo studio, recupero scolastico e potenziamento per ottenere risultati brillanti.",
-        "Adulti: Lezioni focalizzate sulla conversazione e sull'uso pratico dell'inglese, per lavoro o crescita personale."
-      ]
+      id: 'inglese-adulti',
+      title: 'Inglese per adulti',
+      audience: 'Per chi vuole iniziare, riprendere lo studio o sentirsi più sicuro quando usa l’inglese nella vita quotidiana, in viaggio o al lavoro.',
+      activities: ['Conversazione e ascolto su situazioni concrete.', 'Vocabolario, pronuncia e grammatica in base al livello di partenza.', 'Lettura e scrittura per sviluppare competenze utili ai propri obiettivi.'],
+      start: 'Nel primo incontro gratuito definiamo da dove parti e in quali situazioni vuoi usare l’inglese.',
+      message: 'Ciao Chezia, vorrei prenotare il primo incontro gratuito per le lezioni di inglese per adulti.'
     },
     {
-      id: 3,
-      title: "Come funzionano",
-      intro: "",
-      items: [
-        "100% Online: Comode, flessibili e accessibili ovunque tu sia.",
-        "Su misura:Frequenza e obiettivi concordati in base alla tua disponibilità e alla velocità con cui desideri migliorare."
-      ]
+      id: 'bambini-ragazzi',
+      title: 'Lezioni per bambini e ragazzi',
+      audience: 'Per chi si avvicina all’inglese o desidera coltivarlo anche oltre il programma scolastico, con attività adatte all’età e al livello.',
+      activities: ['Attività coinvolgenti per scoprire e ampliare il vocabolario.', 'Ascolto, pronuncia e prime conversazioni, secondo il livello.', 'Esercizi guidati per acquisire familiarità con la lingua e fiducia nelle proprie capacità.'],
+      start: 'Nel primo incontro gratuito ci confrontiamo con il genitore su esigenze, interessi e obiettivi.',
+      message: 'Ciao Chezia, vorrei informazioni sul primo incontro gratuito per le lezioni dedicate a bambini e ragazzi.'
     }
   ];
 
-
   return (
-    <section className="services-modern-section">
+    <section className="services-modern-section" aria-labelledby="services-heading">
       <div className="services-title">
-        <h1>Servizi</h1>
+        <h2 id="services-heading">Scegli il percorso per te</h2>
       </div>
-      <div className="services-grid" >
-        {serviceCards.map((serviceCard) => (
-          <div key={serviceCard.id} className="services-card">
-            <h3>{serviceCard.title}</h3>
-            <div className="services-description">
-              {serviceCard.intro && <p>{serviceCard.intro}</p>}
-              <ul className="services-list">
-                {serviceCard.items.map((item, index) => {
-                  const parts = item.split(":");
-                  return (
-                    <li key={index}>
-                      <strong>{parts[0]}:</strong> {parts[1]}
-                    </li>
-                  );
-                })}
+      <p style={{ color: '#DADBD5', maxWidth: '650px', margin: '0 auto', lineHeight: 1.7 }}>
+        Tre modi per iniziare, con lezioni adatte al tuo livello e alle competenze che vuoi sviluppare.
+      </p>
+      <div className="services-grid">
+        {paths.map((path) => (
+          <article key={path.id} className="services-card" style={{ display: 'flex', flexDirection: 'column', textAlign: 'left', gap: '16px' }}>
+            <h3 style={{ marginBottom: 0 }}>{path.title}</h3>
+            <p style={{ marginBottom: 0, lineHeight: 1.7 }}>{path.audience}</p>
+            <div>
+              <h4 style={{ fontSize: '1rem', fontWeight: 650 }}>Su cosa lavoriamo</h4>
+              <ul style={{ paddingLeft: '20px', marginBottom: 0, lineHeight: 1.7 }}>
+                {path.activities.map((activity) => <li key={activity} style={{ marginBottom: '8px' }}>{activity}</li>)}
               </ul>
             </div>
-          </div>
+            <div style={{ marginTop: 'auto' }}>
+              <h4 style={{ fontSize: '1rem', fontWeight: 650 }}>Come iniziare</h4>
+              <p style={{ lineHeight: 1.7 }}>{path.start}</p>
+              <a className="btn-hero" style={{ maxWidth: '100%' }} href={`https://wa.me/393472912530?text=${encodeURIComponent(path.message)}`}>
+                Prenota il primo incontro gratuito
+              </a>
+            </div>
+          </article>
         ))}
       </div>
+      <div style={{ maxWidth: '800px', margin: '28px auto 0', color: '#DADBD5', lineHeight: 1.75 }}>
+        <h3 style={{ fontSize: '1.3rem', fontWeight: 650 }}>Come si svolgono le lezioni</h3>
+        <p style={{ marginBottom: 0 }}>
+          Tutte le lezioni si svolgono online, individualmente o in gruppo. Livello, attività, frequenza e obiettivi vengono concordati in base alle esigenze dello studente e alla disponibilità. Il primo incontro conoscitivo è gratuito.
+        </p>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
-
+export default Services;

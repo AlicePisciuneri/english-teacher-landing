@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import BorderDecorations from "./Components/BorderDecorations";
 import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import About from "./Components/About";
@@ -14,6 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="landing-page">
+        <BorderDecorations />
         <Header />
         <Hero />
         <About />

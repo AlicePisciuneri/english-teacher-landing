@@ -19,9 +19,9 @@ const BorderDecorations = () => {
       <style>{`
         .landing-page { isolation: isolate; }
         .edge-decorations { position: absolute; inset: 82px 0 100px; pointer-events: none; z-index: 0; overflow: hidden; }
-        .edge-decoration { position: absolute; width: min(var(--icon-size), calc(5vw - 10px)); height: auto; opacity: 0.82; animation: edge-float 5s ease-in-out infinite; }
-        .edge-decoration.left { left: calc(4px + var(--scatter) * max(0px, calc(max(5vw, (100vw - 1150px) / 2) - var(--icon-size) - 12px))); }
-        .edge-decoration.right { right: calc(4px + var(--scatter) * max(0px, calc(max(5vw, (100vw - 1150px) / 2) - var(--icon-size) - 12px))); }
+        .edge-decoration { position: absolute; width: min(var(--icon-size), 2.8vw); height: auto; opacity: 0.82; animation: edge-float 5s ease-in-out infinite; }
+        .edge-decoration.left { left: calc(4px + var(--scatter) * max(0px, calc(max(5vw, (100vw - 1150px) / 2) - min(var(--icon-size), 2.8vw) - 10px))); }
+        .edge-decoration.right { right: calc(4px + var(--scatter) * max(0px, calc(max(5vw, (100vw - 1150px) / 2) - min(var(--icon-size), 2.8vw) - 10px))); }
         .landing-page > :not(.edge-decorations):not(.header):not(style) { position: relative; z-index: 1; }
         .icons-credit a { color: inherit; text-underline-offset: 3px; }
         .icons-credit { font-size: 0.75rem; opacity: 0.85; margin-bottom: 4px; }

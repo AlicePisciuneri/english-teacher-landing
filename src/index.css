@@ -928,3 +928,45 @@ section[id] { scroll-margin-top: 90px; }
 .pricing-card { min-width: 0; overflow-wrap: anywhere; }
 @media (max-width: 992px) { .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 768px) { .pricing-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* First visual refinement: system fonts, quieter surfaces and compact reading. */
+:root { --landing-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body, .landing-page, .header, .hero-grid-container, .hero-subtitle, .btn-hero,
+.about-grid-container, .method-grid-container, .services-modern-section,
+.pricing-modern-section, .faq-modern-section, .contact-grid-container { font-family: var(--landing-font); }
+.landing-page { font-size: 1rem; }
+.header .fst-italic, .hero-modern-section .fst-italic, .about-modern-section .fst-italic,
+.method-modern-section .fst-italic { font-style: normal !important; }
+.header-title a { font-size: 0.95rem; font-weight: 500; }
+.hero-title { font-weight: 650; font-size: clamp(1.9rem, 3.4vw, 2.8rem); line-height: 1.15; letter-spacing: -0.035em; }
+.hero-subtitle { font-size: 0.75rem; font-weight: 600; line-height: 1.6; letter-spacing: 0.06em; }
+.hero-description, .about-description, .method-description { font-size: 1.05rem; line-height: 1.75; opacity: 1; }
+.hero-text { font-size: 0.9rem; line-height: 1.65; }
+.about-title, .method-title, .services-title, .faq-title, .contact-title,
+.pricing-title h2, .contact-title h1 { font-weight: 650; font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.25; letter-spacing: -0.025em; }
+.about-modern-section, .method-modern-section, .contact-modern-section,
+.hero-modern-section, .faq-modern-section, .services-card, .pricing-card {
+  border-radius: 16px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09); backdrop-filter: none;
+}
+.hero-image-card { border-radius: 14px; box-shadow: 0 5px 14px rgba(0,0,0,0.12); }
+.about-grid-container { grid-template-columns: minmax(0, 1fr); gap: 12px; justify-content: stretch; }
+.about-title-column { justify-content: flex-start; }
+.about-title { margin-bottom: 4px; }
+.about-description { max-width: 76ch; }
+.about-description p:last-child { margin-bottom: 0; }
+.method-grid-container { gap: 24px; }
+.services-card, .pricing-card { padding: 28px 24px; margin: 12px auto; }
+.services-card h3, .pricing-card h3 { font-size: 1.2rem; line-height: 1.35; font-weight: 650; }
+.btn-hero, .btn-email, .btn-whatsapp { font-weight: 600; font-size: 1rem; border-radius: 10px; }
+.btn-hero { border-width: 2px; }
+.contact-grid-container { padding: 16px; gap: 28px; }
+.contact-text h4 { font-size: 1rem; font-weight: 650; margin-top: 24px; }
+.faq-item { box-shadow: none; border-radius: 10px; }
+.faq-question { font-size: 1rem; line-height: 1.5; }
+.btn-home:hover, .btn-about:hover, .btn-contact:hover, .btn-hero:hover { transform: none; box-shadow: none; }
+@media (max-width: 576px) {
+  .hero-modern-section, .about-modern-section, .method-modern-section, .contact-modern-section, .faq-modern-section { padding: 28px 20px; border-radius: 14px; }
+  .hero-grid-container { gap: 28px; }
+  .contact-grid-container { padding: 0; }
+  .hero-title { font-size: clamp(1.8rem, 7.4vw, 2.2rem); }
+}

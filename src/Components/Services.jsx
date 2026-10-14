@@ -39,7 +39,7 @@ const Services = () => {
   return (
     <section className="services-modern-section">
       <div className="services-title">
-        <h1>SERVIZI</h1>
+        <h1>Servizi</h1>
       </div>
       <div className="services-grid" >
         {serviceCards.map((serviceCard) => (
@@ -66,3 +66,4 @@ const Services = () => {
 }
 
 export default Services
+

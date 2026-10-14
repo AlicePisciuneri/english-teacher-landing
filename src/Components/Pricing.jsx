@@ -34,7 +34,7 @@ const Pricing = () => {
   return (
     <div className='pricing-modern-section' id="scrollspyHeading4">
       <div className="pricing-title">
-        <h2>SCEGLI IL PERCORSO ADATTO A TE</h2>
+        <h2>Scegli il percorso adatto a te</h2>
       </div>
       <p className='pricing-subtitle'>Confronta le opzioni con il tuo livello</p>
       <div className="pricing-grid" >
@@ -55,4 +55,5 @@ const Pricing = () => {
 }
 
 export default Pricing
+
 

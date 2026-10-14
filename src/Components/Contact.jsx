@@ -7,11 +7,11 @@ const Contact = () => {
       <div className="contact-grid-container">
         <div className="contact-text">
           <div className="contact-title">
-            <h1>CONTATTI</h1>
+            <h1>Contatti</h1>
           </div>
 
           <p>Prenota il tuo primo incontro gratuito</p>
-          <h4>DISPONIBILTA' ATTUALE</h4>
+          <h4>Disponibilità attuale</h4>
           <ul>
             <li>Lunedì: 17:30</li>
             <li>Martedì: tutto il giorno</li>
@@ -40,4 +40,5 @@ const Contact = () => {
 }
 
 export default Contact
+
 

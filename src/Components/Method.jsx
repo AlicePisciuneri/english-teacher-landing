@@ -6,7 +6,7 @@ const Method = () => {
       <div className="method-grid-container">
         <div className="method-title-column">
           <h1 className="method-title fst-italic fs-1">
-            METODO
+            Metodo
           </h1>
         </div>
         <div className="method-text-content">

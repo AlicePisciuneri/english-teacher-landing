@@ -16,7 +16,7 @@ const Hero = () => {
               Prenota il primo incontro gratuito
             </a>
             <a href="#scrollspyHeading4" style={{ display: 'inline-block', marginTop: '16px', textDecoration: 'underline', color: '#134647' }}>
-              Oppure scopri lezioni e tariffe.
+              Scopri lezioni e tariffe
             </a>
           </div>
         </div>
@@ -31,3 +31,4 @@ const Hero = () => {
 }
 
 export default Hero
+

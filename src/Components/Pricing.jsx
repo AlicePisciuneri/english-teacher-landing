@@ -47,8 +47,12 @@ const Pricing = () => {
           </div>
         ))}
       </div>
+      <a className="btn-whatsapp" style={{ margin: '24px auto 0', maxWidth: '350px', justifyContent: 'center', textAlign: 'center' }} href="https://wa.me/393472912530?text=Ciao%20Chezia%2C%20vorrei%20prenotare%20il%20primo%20incontro%20gratuito.">
+        Prenota il primo incontro gratuito
+      </a>
     </div>
   )
 }
 
 export default Pricing
+

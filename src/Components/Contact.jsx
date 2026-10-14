@@ -20,6 +20,9 @@ const Contact = () => {
           </ul>
         </div>
         <div className="contact-btn">
+          <a className="btn-whatsapp" style={{ justifyContent: 'center', textAlign: 'center' }} href="https://wa.me/393472912530?text=Ciao%20Chezia%2C%20vorrei%20prenotare%20il%20primo%20incontro%20gratuito.">
+            Prenota il primo incontro gratuito
+          </a>
           <div className="email">
             <a className="btn-email" href="mailto:cheagle@hotmail.com">
               <div className="email-top-row">
@@ -29,9 +32,7 @@ const Contact = () => {
               <span className="email-address">cheagle@hotmail.com</span>
             </a>
           </div>
-          <a className="btn-whatsapp" href="https://wa.me/393472912530?text=Salve,%20vorrei%20informazioni%20sulle%20lezioni">
-            <i className="bi bi-whatsapp icon-whatsapp"></i>Contattami su Whatsapp
-          </a>
+
         </div>
       </div>
     </section>
@@ -39,3 +40,4 @@ const Contact = () => {
 }
 
 export default Contact
+

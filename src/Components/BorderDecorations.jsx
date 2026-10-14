@@ -1,9 +1,9 @@
 const BorderDecorations = () => {
   const icons = ['icons8-teacher-64.png', 'icons8-language-48.png', 'icons8-great-britain-48.png', 'icons8-language-50.png'];
-  const marks = Array.from({ length: 16 }, (_, index) => ({
+  const marks = Array.from({ length: 40 }, (_, index) => ({
     image: icons[index % icons.length],
     side: index % 2 === 0 ? 'left' : 'right',
-    top: `${4 + index * 5.7}%`
+    top: `${2 + index * 2.35}%`
   }));
 
   return (
@@ -32,3 +32,4 @@ const BorderDecorations = () => {
 };
 
 export default BorderDecorations;
+

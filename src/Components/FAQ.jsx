@@ -12,15 +12,15 @@ const FAQ = () => {
   const faqs = [{
     id: "1",
     question: "Le lezioni si svolgono solo online o anche in presenza?",
-    answer: "Le lezioni si tengono principalmente online tramite piattaforme come Zoom o Google Meet..."
+    answer: "Le lezioni si tengono principalmente online tramite piattaforme come Zoom o Google Meet."
   }, {
     id: "2",
     question: "Come posso disdire o spostare una lezione?",
-    answer: "Puoi spostare o cancellare una lezione con almeno 24 ore di preavviso..."
+    answer: "Puoi spostare o cancellare una lezione con almeno 24 ore di preavviso."
   }, {
     id: "3",
     question: "È previsto un test di livello iniziale?",
-    answer: "Sì! Prima di iniziare il percorso faremo un breve test conoscitivo gratuito..."
+    answer: "Sì! Prima di iniziare il percorso faremo un breve test conoscitivo gratuito."
   }];
 
 
@@ -52,3 +52,5 @@ const FAQ = () => {
 }
 
 export default FAQ
+
+
